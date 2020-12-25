@@ -1,0 +1,183 @@
+/* Desktops and laptops*/
+@media only screen  and (min-width : 1024px) {
+  /* Navbar */
+  .nav-scroll {
+    height: 80px;
+    background-color: rgba(0, 96, 222, .7);
+  }
+  /* Stick */
+  .nav-link a:not(.pesan-btn)::after{
+    content: "";
+    height: 2px;
+    width: 25px;
+    background-color: #2582fe;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: .1s linear;
+  }
+
+  .nav-link a:hover:not(.pesan-link)::after{
+    transform: scaleX(1);
+  }
+
+  .pesan-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #2582fe;
+    transform-origin: top left;
+    transform: scaleX(0);
+    transition: 0.5s;
+  }
+
+  .pesan-btn:hover::before{
+    transform: scaleX(1);
+  }
+
+
+  /* Hero */
+  .menu-btn:hover::before {
+    transform: scaleY(0);
+  }
+}
+
+
+
+/* Smartphones And Table */
+@media only screen and (max-width : 1024px){
+  nav,
+  .footer {
+    padding: 20px 10vw;
+  }
+
+  nav {
+    height: 60px;
+  }
+
+  .nav-scroll {
+    height: 50px;
+    background-color: rgba(0, 96, 222, .7);
+  }
+
+  .hero,
+  .about,
+  .menus,
+  .testimonial {
+    padding: 34px 10vw;
+  }
+
+  .hero,
+  .about,
+  .menus,
+  .testimonial {
+    margin-bottom: 28px;
+  }
+
+
+
+  /* Navbar */
+  /* Humburger Menu  */
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-link {
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-evenly;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100vh;
+    background-color: #0060de;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: .3s linear;
+    z-index: 2;
+    box-shadow: 4px 0px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .slide {
+    opacity: 1;
+    transform: translateX(0);
+    position: fixed;
+  }
+
+
+
+  /* Hero */
+  .hero .content h2 {
+    font-family: 'montserratbold';
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+
+  .hero .content p {
+    font-family: 'montserratmedium';
+    font-size: 24px;
+  }
+
+
+
+  /* About */
+  .about {
+    display: block;
+  }
+
+  .about .text {
+    margin-right: 0px;
+  }
+
+  .about .text p {
+    margin-bottom: 20px;
+  }
+
+  .about .krusty-krab {
+    width: 100%;
+    height: 150px;
+  }
+
+
+
+  /* Testimoni */
+  .testimoni .nama-ket h4 {
+    font-size: 20px;
+  }
+
+
+
+  /* Footer */
+  .footer .sosmed {
+    justify-self: left;;
+    margin-top: 20px;
+  }
+
+
+
+  /* Font Teks */
+  .title1-teks {
+    font-family: 'montserratmedium';
+    font-size: 22px;
+    line-height: 150%;
+
+  }
+
+  .body-teks {
+    font-family: 'montserratregular';
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  a {
+    font-size: 2em;
+  }
+}

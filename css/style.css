@@ -1,0 +1,380 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: grid;
+  list-style: none;
+  font-family: 'montserratregular';
+  font-size: 12px;
+}
+
+.about,
+.menus,
+.testimonial {
+  padding: 80px 140px;
+}
+
+
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 140px;
+  align-items: center;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+  background-color: #0060de;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 100px;
+  transition: 300ms;
+}
+
+.logo img {
+  max-width: 60px;
+}
+
+.nav-link {
+  display: flex;
+  justify-content: space-between;
+  min-width: 60%;
+  align-items: center;
+}
+
+.nav-link a {
+  color: white;
+  position: relative;
+}
+
+
+
+/* Hero */
+.hero {
+  overflow: hidden;
+  height: 86vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 95px;
+}
+
+.hero video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.hero::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.hero .content {
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.hero .content h2 {
+  font-family: 'montserratbold';
+  font-size: 80px;
+  pointer-events: none;
+}
+
+.hero .content p {
+  font-family: 'montserratmedium';
+  font-size: 36px;
+  pointer-events: none;
+}
+
+.menu-btn {
+  background-color: rgba(255,255,255,.0);
+  color: white;
+  margin-top: 20px;
+}
+
+.menu-btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: #2582fe;
+  transform-origin: top left;
+  transform: scaleY(1);
+  transition: 0.5s;
+}
+
+
+
+/* About */
+.about {
+  display: flex;
+  align-items: center;
+}
+
+.about .text {
+  flex: 1.5;
+  margin-right: 40px;
+}
+
+.about .text h2 {
+  font-family: 'montserratmedium';
+  font-size: 24px;
+  line-height: 60px;
+}
+
+.about .krusty-krab {
+  width: 500px;
+  height: 350px;
+  background-image: url('../img/restoran.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex: 2;
+  box-shadow: 8px 16px 24px 4px rgba(0, 0, 0, .15);
+}
+
+
+
+/* Menus */
+.menus {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-column-gap: 80px;
+  grid-row-gap: 40px;
+  background-color: #0060de;
+  color: white;
+}
+
+.menus .title1-teks {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  padding: 30px 0px;
+  position: relative;
+}
+
+.menu .harga {
+  font-family: 'montserratmedium';
+}
+
+.menu::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 90%;
+  height: 2px;
+  background: #52b5ff;
+  border-radius: 5px;
+}
+
+
+
+/* Testimonial */
+.testimonial {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 100px;
+  grid-row-gap: 40px;
+}
+
+.testimonial .title1-teks {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.testimoni {
+  padding: 20px 20px;
+  background-color: #2582fe;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, .2);
+}
+
+.testimoni .photo {
+  float: left;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 150px;
+  height: 60px;
+  width: 60px;
+  margin-right: 16px;
+  margin-bottom: 12px;
+}
+
+.testimoni .photo-fred {
+  background-image: url('../img/fred.jpg');
+  background-position: 45% 20%;
+}
+
+.testimoni .photo-jkl {
+  background-image: url('../img/jkl.jpeg');
+  background-position: 50% 25%;
+}
+
+.testimoni .nama-ket h4 {
+  font-family: 'montserratmedium';
+  font-size: 22px;
+}
+
+.clear {
+  clear: left;
+}
+
+
+
+/* Footer */
+.footer {
+  padding: 20px 10vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  align-items: center;
+  background-color: #0060de;
+  color: white;
+  position: relative;
+}
+
+.footer .sosmed {
+  justify-self: right;
+  /* border: 1px solid white; */
+}
+
+.footer .sosmed img {
+  max-height: 48px;
+}
+
+.footer .sosmed a:not(:nth-child(4)) {
+  margin-right: 12px;
+}
+
+
+/* Component */
+/* Button */
+.btn {
+  padding: 16px 32px;
+  font-family: 'montserratmedium';
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid white;
+  z-index: 1;
+}
+
+/* Humburger Menu */
+.menu-toggle {
+  height: 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 3;
+}
+
+.menu-toggle span{
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: .3s linear;
+}
+
+.menu-toggle input {
+  position: absolute;
+  height: 28px;
+  width: 40px;
+  top: -5px;
+  left: -6px;
+  opacity: 0;
+  z-index: 9;
+}
+
+.menu-toggle span:nth-child(2){
+  transform-origin: top left;
+}
+
+.menu-toggle span:nth-child(4){
+  transform-origin: bottom left;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(1px, 0px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  transform: translate(0px, 10px) ;
+  opacity: 0;
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(-1px, 3px);
+}
+
+/* Go To Top Btn */
+.gotop {
+  height: 48px;
+  width: 48px;
+  background-color: #24292e;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, .2);
+  border-radius: 5px;
+  line-height: 48px;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+}
+
+
+
+
+/* Font Teks */
+.title1-teks {
+  font-family: 'montserratmedium';
+  font-size: 24px;
+  line-height: 150%;
+
+}
+
+.body-teks {
+  font-family: 'montserratregular';
+  font-size: 16px;
+  line-height: 150%;
+}
+
+
+a {
+  text-decoration: none;
+  font-family: 'montserratmedium';
+  font-size: 16px;
+}
